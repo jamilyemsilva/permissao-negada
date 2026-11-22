@@ -1,15 +1,14 @@
-# Nome do Jogo
+# Permissão Negada
 
 Projeto final da disciplina de Introdução a Algoritmos/Programação, desenvolvido com Python e Pygame.
 
-Este repositório é um template para os grupos da disciplina. A proposta é começar com uma base funcional e evoluir o jogo ao longo do semestre.
-
 ## Integrantes do grupo
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- Arthur Domingues
+- Jamily E Silva
+- Lucas Henrique Barbosa
+- Larissa Monção de Oliveira
+- Paulo Henrique de Melo
 
 ## Estrutura do projeto
 
@@ -22,43 +21,28 @@ Este repositório é um template para os grupos da disciplina. A proposta é com
 
 ## Descrição do jogo
 
-Descreva brevemente a ideia principal do jogo.
+O jogador deverá gerenciar um celular novo, analisando as permissões solicitadas por diferentes aplicativos. Na tela, aparecerá um cartão contendo o nome do aplicativo, sua categoria e as permissões solicitadas, como câmera, localização, contatos, microfone e fotos.
 
-Exemplo:
+Para cada solicitação, o jogador deverá escolher entre os botões "Permitir" ou "Negar". Cada decisão modificará dois medidores: Privacidade e Utilidade.
 
-> O jogo consiste em controlar um personagem que deve coletar moedas e evitar obstáculos. O jogador ganha pontos ao coletar itens e perde vidas ao colidir com obstáculos. A partida termina quando o tempo acaba ou quando o jogador perde todas as vidas.
+O jogo será dividido em três fases, com níveis de dificuldade fácil, médio e difícil. Ao final de cada fase, caso a privacidade esteja abaixo de 60%, o jogador precisará resolver um pequeno puzzle para tentar recuperá-la. Permitir permissões desnecessárias poderá gerar eventos de vazamento de dados, enquanto negar permissões essenciais poderá comprometer o funcionamento dos aplicativos.
 
 ## Objetivo do jogador
 
-Explique o que o jogador precisa fazer para vencer ou avançar no jogo.
-
-Exemplo:
-
-> O objetivo é coletar a maior quantidade possível de itens antes que o tempo acabe, evitando colisões com os obstáculos.
+Concluir as três fases mantendo os medidores de Privacidade e Utilidade em equilíbrio, sem perder todas as vidas. Para isso, o jogador deverá analisar cada solicitação e conceder apenas as permissões realmente necessárias para o funcionamento dos aplicativos.
 
 ## Regras do jogo
 
-Liste as principais regras do jogo.
-
-Exemplo:
-
-- O jogador se movimenta usando as setas do teclado.
-- Cada item coletado aumenta a pontuação.
-- Colidir com um obstáculo reduz a quantidade de vidas.
-- A partida termina quando o jogador perde todas as vidas ou quando o tempo acaba.
+Regra 1: Cada aplicativo apresentará uma ou mais permissões, e o jogador deverá decidir individualmente entre permitir ou negar cada solicitação.
+Regra 2: Cada decisão alterará os medidores de Privacidade e Utilidade de acordo com a relevância da permissão para a categoria do aplicativo.
+Regra 3: Negar todas as permissões poderá reduzir a Utilidade, enquanto permitir todas poderá comprometer a Privacidade e gerar eventos de vazamento de dados.
+Regra 4: Ao final de cada fase, se a Privacidade estiver abaixo de 60%, o jogador deverá resolver um puzzle. Caso erre, avançará para a próxima fase com o medidor reduzido e perderá uma vida.
+Regra 5: Se qualquer um dos medidores chegar a 0 ou todas as vidas forem perdidas, a partida será encerrada.
 
 ## Controles
 
 Informe as teclas ou comandos utilizados no jogo.
-
-Exemplo:
-
-- Seta para cima: mover para cima
-- Seta para baixo: mover para baixo
-- Seta para esquerda: mover para esquerda
-- Seta para direita: mover para direita
-- Espaço: realizar ação
-- ESC: sair do jogo
+(em construção)
 
 ## Como executar o projeto
 
@@ -66,7 +50,7 @@ Exemplo:
 
 ```bash
 git clone LINK_DO_REPOSITORIO
-cd NOME_DA_PASTA
+cd permissao-negada
 pip install -r requirements.txt
 python main.py
 ```
